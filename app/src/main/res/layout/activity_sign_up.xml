@@ -8,39 +8,45 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".AuthActivity">
+    tools:context="com.dirac.SignUpActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/background_card">
 
-        <ImageView
-            android:id="@+id/auth_dirac_text"
-            android:layout_width="128dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/dirac_text_logo"
-            android:src="@drawable/dirac_text" />
-
         <TextView
-            android:id="@+id/auth_description"
+            android:id="@+id/signup_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/auth_dirac_text"
             android:layout_marginBottom="40dp"
             android:gravity="center"
-            android:text="@string/auth_description"
+            android:text="Create a DIRAC Account by filling in the below form"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/auth_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-            android:layout_below="@id/auth_description">
+            android:id="@+id/signup_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_description">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/edit_auth_email"
+                android:id="@+id/edit_signup_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:inputType="textPersonName" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_name">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_signup_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/auth_email"
@@ -49,13 +55,13 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/auth_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-            android:layout_below="@id/auth_email">
+            android:id="@+id/signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_email">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/edit_auth_password"
+                android:id="@+id/edit_signup_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/auth_password"
@@ -63,29 +69,33 @@
 
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/signup_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_password">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_signup_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location"
+                android:inputType="text" />
+
+        </android.support.design.widget.TextInputLayout>
+
         <Button
-            android:id="@+id/btn_auth_signin"
+            android:id="@+id/btn_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/auth_password"
+            android:layout_alignEnd="@+id/signup_location"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/auth_password"
+            android:layout_below="@+id/signup_location"
             android:layout_marginTop="20dp"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
-            android:text="@string/auth_signin"
+            android:text="Sign Up"
             android:textColor="@android:color/white" />
-
-        <TextView
-            android:id="@+id/btn_auth_signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_auth_signin"
-            android:layout_centerHorizontal="true"
-            android:onClick="signUp"
-            android:padding="5dp"
-            android:text="@string/auth_signup"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
     </RelativeLayout>
 
