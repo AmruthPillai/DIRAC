@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DIRAC</string>
+    <string name="splash_credits">made with ❤ by AVAV</string>
+
+    <string name="auth_description">Login using your DIRAC Account, or sign in using Facebook to get a more social experience.</string>
+    <string name="dirac_text_logo">DIRAC Text Logo</string>
+
+    <string name="auth_username">Username</string>
+    <string name="auth_password">Password</string>
+
+    <string name="title_activity_main">DIRAC Home</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="auth_signup">Sign Up for a DIRAC Account</string>
+    <string name="auth_signin">Sign In</string>
+</resources>
